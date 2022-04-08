@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Hello world!</title>
+
+    
+    <link rel="stylesheet" href="/style.css" />
+
+    
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    
+    <h1>
+      Light and Sound Memory Game!
+    </h1>
+    <p>
+      Welcome to the game!
+    </p>
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button class="hidden" id="stopBtn" onclick="stopGame()">
+      Stop
+    </button>
+    
+    <div id="gameButtonArea">
+      <button 
+              onclick="guess(1)" 
+              id="button1" 
+              onmousedown="startTone(1)" 
+              onmouseup="stopTone()">
+      </button>
+      <button 
+              onclick="guess(2)" 
+              id="button2" 
+              onmousedown="startTone(2)" 
+              onmouseup="stopTone()">
+      </button>
+      <button 
+              onclick="guess(3)" 
+              id="button3" 
+              onmousedown="startTone(3)" 
+              onmouseup="stopTone()">
+      </button>
+      <button 
+              onclick="guess(4)" 
+              id="button4" 
+              onmousedown="startTone(4)" 
+              onmouseup="stopTone()">
+      </button>
+    </div>
+  </body>
+</html>
