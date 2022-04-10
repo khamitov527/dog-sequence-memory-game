@@ -20,6 +20,31 @@ h1 {
   font-size: 50px;
 }
 
+p {
+  font-size: 25px;
+}
+
+.inline {
+  display: inline-block;
+  margin: 0px;
+}
+
+#show-instructions {
+  margin: 31.5px;
+}
+
+#first-life {
+  margin-left: 5px;
+}
+
+#third-life {
+  margin-right: 5px;
+}
+
+#show-time {
+  margin-left: 30px;
+}
+
 button {
   padding: 10px;
   border-radius: 10px;
