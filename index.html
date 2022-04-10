@@ -14,19 +14,21 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    
     <h1>
-      Light and Sound Memory Game!
+      Dog Sequence Memory Game!
     </h1>
+    
+    
     <p>
-      Welcome to the game!
+      Number of lives remaining:
     </p>
-    <button id="startBtn" onclick="startGame()">
-      Start
-    </button>
-    <button class="hidden" id="stopBtn" onclick="stopGame()">
-      Stop
-    </button>
+
+    <div>
+      <img src="/Assets/heart.png" alt="heart" width="50" height="50" id="life1">
+      <img src="https://media.istockphoto.com/vectors/heart-shape-black-color-vector-id879492212?k=20&m=879492212&s=612x612&w=0&h=h2dXVcOGcF4UQxVJX-FRpGlH1sK_PiIdLSf4Sq-QOmg=" alt="heart" width="50" height="50" id="life2">
+      <img src="https://media.istockphoto.com/vectors/heart-shape-black-color-vector-id879492212?k=20&m=879492212&s=612x612&w=0&h=h2dXVcOGcF4UQxVJX-FRpGlH1sK_PiIdLSf4Sq-QOmg=" alt="heart" width="50" height="50" id="life3">
+    </div>
+    
     
     <div id="gameButtonArea">
       <button 
@@ -53,6 +55,21 @@
               onmousedown="startTone(4)" 
               onmouseup="stopTone()">
       </button>
+      <button 
+              onclick="guess(5)" 
+              id="button5" 
+              onmousedown="startTone(5)" 
+              onmouseup="stopTone()">
+      </button>
     </div>
+    
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button class="hidden" id="stopBtn" onclick="stopGame()">
+      Stop
+    </button>
+    
+    <div id="timer"></div>
   </body>
 </html>
