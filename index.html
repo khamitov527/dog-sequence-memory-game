@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,20 +14,30 @@
     
     <script src="/script.js" defer></script>
   </head>
+  
   <body>
     <h1>
       Dog Sequence Memory Game!
     </h1>
-    
-    
-    <p>
-      Number of lives remaining:
-    </p>
 
-    <div>
-      <img src="/Assets/heart.png" alt="heart" width="50" height="50" id="life1">
-      <img src="https://media.istockphoto.com/vectors/heart-shape-black-color-vector-id879492212?k=20&m=879492212&s=612x612&w=0&h=h2dXVcOGcF4UQxVJX-FRpGlH1sK_PiIdLSf4Sq-QOmg=" alt="heart" width="50" height="50" id="life2">
-      <img src="https://media.istockphoto.com/vectors/heart-shape-black-color-vector-id879492212?k=20&m=879492212&s=612x612&w=0&h=h2dXVcOGcF4UQxVJX-FRpGlH1sK_PiIdLSf4Sq-QOmg=" alt="heart" width="50" height="50" id="life3">
+    
+    <p id="show-instructions">
+        CLICK START TO PLAY!
+    </p>
+    
+    <div id="info">
+
+        <p id="show-life" class="hidden inline">
+          LIVES REMAINING:
+        </p>
+        <img class="hidden inline" src="https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/heart-image.png?v=1649617025292" alt="heart" width="25" height="25" id="first-life">
+        <img class="hidden inline" src="https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/heart-image.png?v=1649617025292" alt="heart" width="25" height="25" id="second-life">
+        <img class="hidden inline" src="https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/heart-image.png?v=1649617025292" alt="heart" width="25" height="25" id="third-life">
+
+        <p id="show-time" class="hidden inline">
+          TIME REMAINING:
+        </p>
+      
     </div>
     
     
@@ -63,6 +74,7 @@
       </button>
     </div>
     
+    
     <button id="startBtn" onclick="startGame()">
       Start
     </button>
@@ -70,6 +82,6 @@
       Stop
     </button>
     
-    <div id="timer"></div>
+    
   </body>
 </html>
