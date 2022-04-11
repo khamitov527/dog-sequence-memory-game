@@ -1,8 +1,8 @@
-# Pre-work - *Dog Sequence*
+# Pre-work - *Dog Sequence Memory Game*
 
 **Dog Sequence** is a Light & Sound Memory game to apply for CodePath's SITE Program. 
 
-Submitted by: **Akylbek (Beck) Khamitov**
+Submitted by: **Akylbek Khamitov**
 
 Time spent: **#** hours spent in total
 
@@ -29,12 +29,17 @@ The following **optional** features are implemented:
 * [x] Computer picks a different pattern each time the game is played
 * [x] Player only loses after 3 mistakes (instead of on the first mistake)
 * [x] Game button appearance change goes beyond color (e.g. add an image)
-* [ ] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
-* [ ] User has a limited amount of time to enter their guess on each turn
+* [x] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
+* [x] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app!
+- [x] Added heart images to show the number of lives left
+- [x] Added gifs instead of colors for buttons
+- [x] Each button has a custom sound (game does not use any frequency sounds)
+- [x] Added timer that shows number of seconds left
+- [x] When a player makes a mistake, timer resets
+
 
 ## Video Walkthrough (GIF)
 
@@ -46,9 +51,14 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
-
+      
+      https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+      https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+      https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+      https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices
+      https://www.youtube.com/watch?v=VlwSz2dXK_8
+      https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+      https://stackoverflow.com/questions/43167907/sound-play-stop-pause
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 [YOUR ANSWER HERE]
