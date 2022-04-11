@@ -68,7 +68,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
 
 ## License
 
-    Copyright Akylbek (Beck) Khamitov
+    Copyright Akylbek Khamitov
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

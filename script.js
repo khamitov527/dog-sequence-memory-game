@@ -1,21 +1,25 @@
-var clueHoldTime = 1000;
-const cluePauseTime = 333; 
-const nextClueWaitTime = 333;
+const cluePauseTime = 200; 
+const nextClueWaitTime = 200;
 
-var pattern = [0, 0, 0, 0, 0, 0, 0, 0];
+var clueHoldTime = 1200;
+
+var pattern = [0, 0, 0, 0, 0, 0];
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;
 var guessCounter = 0;
 var lifeCount = 3;
+let timer = null; 
+var time = 15;
+var resetTime = false;
 
 
 function startGame(){
   
   shufflePattern();
   lifeCount = 3;
-  clueHoldTime = 1000;
+  clueHoldTime = 1200;
   progress = 0;
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
@@ -32,6 +36,7 @@ function startGame(){
 
 function stopGame(){
   gamePlaying = false;
+  resetTime = true;
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
     
@@ -73,7 +78,28 @@ function playClueSequence(){
     delay += clueHoldTime; 
     delay += cluePauseTime;
   }
-  clueHoldTime -= 100;
+  clueHoldTime -= 150;
+  
+  time = 15;
+  resetTime = false;
+
+  clearInterval(timer);
+  timer = setInterval(countDown, 1000);
+}
+
+
+function countDown() {
+    time -= 1; 
+    document.getElementById("show-time").innerHTML =
+      "TIME REMAINING: " + time;
+    if (time < 0 || resetTime) {
+      if(!resetTime) {
+        alert("Time's up. You lost.");
+        stopGame(); 
+      }
+      time = 15;
+      clearInterval(timer);
+    }
 }
 
 
@@ -95,6 +121,7 @@ function guess(btn){
     return;
   }else if (btn != pattern[guessCounter]){
     lifeCount--;
+    time = 15;
     if(lifeCount === 2){
       document.getElementById("first-life").classList.add("hidden");
     }
@@ -110,11 +137,11 @@ function guess(btn){
     if (guessCounter > progress && progress < pattern.length) {
       progress += 1; 
       guessCounter = 0;
-      //stopTimer();
       if (progress < pattern.length) {
         playClueSequence();
       } else {
         winGame();
+        resetTime = true;
       }
     }
   }
