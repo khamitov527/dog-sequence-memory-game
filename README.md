@@ -4,7 +4,7 @@
 
 Submitted by: **Akylbek Khamitov**
 
-Time spent: **#** hours spent in total
+Time spent: **15** hours spent in total
 
 Link to project: https://glitch.com/~dog-sequence
 
@@ -41,24 +41,29 @@ The following **additional** features are implemented:
 - [x] When a player makes a mistake, timer resets
 
 
-## Video Walkthrough (GIF)
+## Video Walkthrough (GIF, 1.5x speed, no sound) (Try it yourself [here](https://dog-sequence.glitch.me/))
 
-If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](gif1-link-here)
-![](gif2-link-here)
-![](gif3-link-here)
-![](gif4-link-here)
+### Walkthrough without playing
+![Walkthrough](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/walkthrough.gif)
+### Player wins
+![Win](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/win.gif)
+### Player loses
+![Lost](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/lost.gif)
+### Player makes mistakes but wins anyway
+![mistakesWin](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/mistakesWin.gif)
+### Player loses because time exceeds the limit
+![timeUp](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/timeUp.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
       
-      https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
-      https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
-      https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
-      https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices
-      https://www.youtube.com/watch?v=VlwSz2dXK_8
-      https://www.w3schools.com/js/js_htmldom_eventlistener.asp
-      https://stackoverflow.com/questions/43167907/sound-play-stop-pause
+      - https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+      - https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+      - https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+      - https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices
+      - https://www.youtube.com/watch?v=VlwSz2dXK_8
+      - https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+      - https://stackoverflow.com/questions/43167907/sound-play-stop-pause
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 [YOUR ANSWER HERE]
