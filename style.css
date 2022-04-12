@@ -20,6 +20,8 @@ h1 {
   font-size: 50px;
 }
 
+h2
+
 p {
   font-size: 25px;
 }
@@ -70,10 +72,6 @@ button {
   border-width: 5px;
 }
 
-.hidden {
-  display: none;
-}
-
 #button1, #button2, #button3, #button4, #button5 {
     background: url("https://c.tenor.com/CjSRhQExM34AAAAC/question-mark.gif");
     background-position: center;
@@ -101,3 +99,57 @@ button {
     background-image: url("https://i.pinimg.com/originals/95/e1/cd/95e1cd7368675dd7da6f6d77c190ae61.gif");
 }
 
+.popup {
+  position: fixed;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  width: 500px;
+  height: 250px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1), 0 0 0 1000px rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+
+.close {
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  padding: 2px 7px;
+  background: #ff605c;
+  color: #ff605c;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.play-again {
+  position: absolute;
+  border-radius: 40px;
+  bottom: 0;
+  padding: 20px 20px;
+  background: #00ca4e;
+  color: #ffffff;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.play-again:hover {
+  background: #00ca4e;
+  color: #154f30;
+}
+
+.close:hover {
+  background: #ff605c;
+  color: #990f02;
+}
+
+.hidden {
+  display: none;
+}

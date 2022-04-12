@@ -27,6 +27,19 @@ var sound5 = new Audio();
 sound5.src = "https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/5.wav?v=1649717268688";
 
 
+let startButton = document.getElementById("startBtn");
+let stopButton = document.getElementById("stopBtn");
+let popup = document.querySelector(".popup");
+let showInstructions = document.getElementById("show-instructions");
+let showLife = document.getElementById("show-life");
+let showTime = document.getElementById("show-time");
+let life1 = document.getElementById("first-life");
+let life2 = document.getElementById("second-life");
+let life3 = document.getElementById("third-life");
+let winMessage = document.getElementById("win-message");
+let loseMessage = document.getElementById("lose-message");
+
+
 function playSound(btn){
   switch(btn) {
   case 1:
@@ -78,32 +91,36 @@ function startGame(){
   clueHoldTime = 1200;
   progress = 0;
   gamePlaying = true;
-  document.getElementById("startBtn").classList.add("hidden");
-  document.getElementById("stopBtn").classList.remove("hidden");
+  startButton.classList.add("hidden");
+  stopButton.classList.remove("hidden");
+  popup.classList.add("hidden");
   
-  document.getElementById("show-instructions").classList.add("hidden");
-  document.getElementById("show-life").classList.remove("hidden");
-  document.getElementById("show-time").classList.remove("hidden");
-  document.getElementById("first-life").classList.remove("hidden");
-  document.getElementById("second-life").classList.remove("hidden");
-  document.getElementById("third-life").classList.remove("hidden");
+  showInstructions.classList.add("hidden");
+  showLife.classList.remove("hidden");
+  showTime.classList.remove("hidden");
+  life1.classList.remove("hidden");
+  life2.classList.remove("hidden");
+  life3.classList.remove("hidden");
   playClueSequence();
 }
 
 function stopGame(){
   gamePlaying = false;
   resetTime = true;
-  document.getElementById("startBtn").classList.remove("hidden");
-  document.getElementById("stopBtn").classList.add("hidden");
-    
-  document.getElementById("show-instructions").classList.remove("hidden");
-  document.getElementById("show-life").classList.add("hidden");
-  document.getElementById("show-time").classList.add("hidden");
-  document.getElementById("first-life").classList.add("hidden");
-  document.getElementById("second-life").classList.add("hidden");
-  document.getElementById("third-life").classList.add("hidden");
+  startButton.classList.remove("hidden");
+  stopButton.classList.add("hidden");  
+  
+  showInstructions.classList.remove("hidden");
+  showLife.classList.add("hidden");
+  showTime.classList.add("hidden");
+  life1.classList.add("hidden");
+  life2.classList.add("hidden");
+  life3.classList.add("hidden");
 }
 
+function closePopup(){
+  popup.classList.add("hidden");
+}
 
 function lightButton(btn){
   document.getElementById("button"+btn).classList.add("lit")
@@ -145,11 +162,10 @@ function playClueSequence(){
 
 function countDown() {
     time -= 1; 
-    document.getElementById("show-time").innerHTML =
+    showTime.innerHTML =
       "TIME REMAINING: " + time;
     if (time < 0 || resetTime) {
       if(!resetTime) {
-        alert("Time's up. You lost.");
         stopGame(); 
       }
       time = 15;
@@ -159,13 +175,12 @@ function countDown() {
 
 
 function loseGame(){
+  popup.classList.remove("hidden");
   stopGame();
-  alert("Game Over. You lost.");
 }
 
 function winGame(){
   stopGame();
-  alert("Game Over. You won.");
 }
 
 
@@ -178,13 +193,13 @@ function guess(btn){
     lifeCount--;
     time = 15;
     if(lifeCount === 2){
-      document.getElementById("first-life").classList.add("hidden");
+      life1.classList.add("hidden");
     }
     if(lifeCount === 1){
-      document.getElementById("second-life").classList.add("hidden");
+      life2.classList.add("hidden");
     }
     if(!lifeCount){
-      document.getElementById("third-life").classList.add("hidden");
+      life3.classList.add("hidden");
       loseGame();  
     }
   }else if (guessCounter <= progress) {
