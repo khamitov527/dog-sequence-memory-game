@@ -11,7 +11,7 @@ var volume = 0.5;
 var guessCounter = 0;
 var lifeCount = 3;
 let timer = null; 
-var time = 15;
+var time = 16;
 var resetTime = false;
 
 
@@ -27,11 +27,10 @@ var sound5 = new Audio();
 sound5.src = "https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/5.wav?v=1649717268688";
 
 
-let startButton = document.getElementById("startBtn");
-let stopButton = document.getElementById("stopBtn");
-let popup = document.querySelector(".popup");
-let showInstructions = document.getElementById("show-instructions");
-let showLife = document.getElementById("show-life");
+let menu = document.querySelector(".menu");
+let game = document.querySelector(".game");
+let winStats = document.querySelector(".win-stats");
+let loseStats = document.querySelector(".lose-stats");
 let showTime = document.getElementById("show-time");
 let life1 = document.getElementById("first-life");
 let life2 = document.getElementById("second-life");
@@ -85,19 +84,18 @@ function stopSound(btn){
 }
 
 function startGame(){
-  
+
   shufflePattern();
   lifeCount = 3;
   clueHoldTime = 1200;
   progress = 0;
   gamePlaying = true;
-  startButton.classList.add("hidden");
-  stopButton.classList.remove("hidden");
-  popup.classList.add("hidden");
+
+  menu.classList.add("hidden");
+  game.classList.remove("hidden");
+  winStats.classList.add("hidden");
+  loseStats.classList.add("hidden");
   
-  showInstructions.classList.add("hidden");
-  showLife.classList.remove("hidden");
-  showTime.classList.remove("hidden");
   life1.classList.remove("hidden");
   life2.classList.remove("hidden");
   life3.classList.remove("hidden");
@@ -107,19 +105,32 @@ function startGame(){
 function stopGame(){
   gamePlaying = false;
   resetTime = true;
-  startButton.classList.remove("hidden");
-  stopButton.classList.add("hidden");  
+  menu.classList.remove("hidden");
+  game.classList.add("hidden");
+  winStats.classList.add("hidden");
+  loseStats.classList.add("hidden");
   
-  showInstructions.classList.remove("hidden");
-  showLife.classList.add("hidden");
-  showTime.classList.add("hidden");
   life1.classList.add("hidden");
   life2.classList.add("hidden");
   life3.classList.add("hidden");
 }
 
-function closePopup(){
-  popup.classList.add("hidden");
+function endGame(){
+  gamePlaying = false;
+  resetTime = true;
+  menu.classList.add("hidden");
+  game.classList.add("hidden");
+  
+  life1.classList.add("hidden");
+  life2.classList.add("hidden");
+  life3.classList.add("hidden");
+}
+
+function backToMenu(){
+  menu.classList.remove("hidden");
+  game.classList.add("hidden");
+  winStats.classList.add("hidden");
+  loseStats.classList.add("hidden");
 }
 
 function lightButton(btn){
@@ -148,11 +159,11 @@ function playClueSequence(){
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue,delay,pattern[i]) 
     delay += clueHoldTime; 
-    delay += cluePauseTime;
+    delay += cluePauseTime;      
   }
   clueHoldTime -= 150;
   
-  time = 15;
+  time = 16;
   resetTime = false;
 
   clearInterval(timer);
@@ -162,25 +173,26 @@ function playClueSequence(){
 
 function countDown() {
     time -= 1; 
-    showTime.innerHTML =
-      "TIME REMAINING: " + time;
+    showTime.innerHTML = "⏰ " + time;
     if (time < 0 || resetTime) {
       if(!resetTime) {
+        loseStats.classList.remove("hidden");
         stopGame(); 
       }
-      time = 15;
+      time = 16;
       clearInterval(timer);
     }
 }
 
 
 function loseGame(){
-  popup.classList.remove("hidden");
-  stopGame();
+  loseStats.classList.remove("hidden");
+  endGame();
 }
 
 function winGame(){
-  stopGame();
+  winStats.classList.remove("hidden");
+  endGame();
 }
 
 
@@ -191,7 +203,7 @@ function guess(btn){
     return;
   }else if (btn != pattern[guessCounter]){
     lifeCount--;
-    time = 15;
+    time = 16;
     if(lifeCount === 2){
       life1.classList.add("hidden");
     }
