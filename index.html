@@ -16,78 +16,80 @@
   </head>
   
   <body>
-    <h1>
-      Dog Sequence Memory Game!
-    </h1>
-
-    
-    <p id="show-instructions">
+     
+    <div class="hidden popup menu">
+      <h1>
+        Dog Sequence Memory Game!
+      </h1>
+      <h2>
         CLICK START TO PLAY!
-    </p>
+      </h2>
+      <button class="buttons start" onclick="startGame()">
+        START
+      </button>
+    </div>
     
-    <div id="info">
-
-        <p id="show-life" class="hidden inline">
-          LIVES REMAINING:
-        </p>
-        <img class="hidden inline" src="https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/heart-image.png?v=1649617025292" alt="heart" width="25" height="25" id="first-life">
-        <img class="hidden inline" src="https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/heart-image.png?v=1649617025292" alt="heart" width="25" height="25" id="second-life">
-        <img class="hidden inline" src="https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/heart-image.png?v=1649617025292" alt="heart" width="25" height="25" id="third-life">
-
-        <p id="show-time" class="hidden inline">
-          TIME REMAINING:
-        </p>
+    
+    <div class="hidden popup game">
       
+      <p id="show-time" class="inline">⏰</p>
+      
+      <div>
+        <p class="hidden inline" id="first-life">💛</p>        
+        <p class="hidden inline" id="second-life">💛</p> 
+        <p class="hidden inline" id="third-life">💛</p> 
+      </div>
+
+
+      <div id="gameButtonArea">
+        <button 
+                onclick="guess(1)" 
+                id="button1" 
+                onmousedown="playSound(1)" 
+                onmouseup="stopSound(1)">
+        </button>
+        <button 
+                onclick="guess(2)" 
+                id="button2" 
+                onmousedown="playSound(2)" 
+                onmouseup="stopSound(2)">
+        </button>
+        <button 
+                onclick="guess(3)" 
+                id="button3" 
+                onmousedown="playSound(3)" 
+                onmouseup="stopSound(3)">
+        </button>
+        <button 
+                onclick="guess(4)" 
+                id="button4" 
+                onmousedown="playSound(4)" 
+                onmouseup="stopSound(4)">
+        </button>
+        <button 
+                onclick="guess(5)" 
+                id="button5" 
+                onmousedown="playSound(5)" 
+                onmouseup="stopSound(5)">
+        </button>
+      </div>
+    
+      <button class="buttons stop" onclick="stopGame()">
+        STOP
+      </button>
+    
     </div>
     
-    
-    <div id="gameButtonArea">
-      <button 
-              onclick="guess(1)" 
-              id="button1" 
-              onmousedown="playSound(1)" 
-              onmouseup="stopSound(1)">
-      </button>
-      <button 
-              onclick="guess(2)" 
-              id="button2" 
-              onmousedown="playSound(2)" 
-              onmouseup="stopSound(2)">
-      </button>
-      <button 
-              onclick="guess(3)" 
-              id="button3" 
-              onmousedown="playSound(3)" 
-              onmouseup="stopSound(3)">
-      </button>
-      <button 
-              onclick="guess(4)" 
-              id="button4" 
-              onmousedown="playSound(4)" 
-              onmouseup="stopSound(4)">
-      </button>
-      <button 
-              onclick="guess(5)" 
-              id="button5" 
-              onmousedown="playSound(5)" 
-              onmouseup="stopSound(5)">
-      </button>
+    <div class="hidden popup win-stats">
+      <h3 id="win-message">Congratulations, you won! 🎉🎉🎉</h3>
+      <b class="buttons play-again" onclick="startGame()">PLAY AGAIN</b>
+      <b class="buttons back-to-menu" onclick="backToMenu()">BACK TO MENU</b>
     </div>
     
-    
-    <button id="startBtn" onclick="startGame()">
-      Start
-    </button>
-    <button class="hidden" id="stopBtn" onclick="stopGame()">
-      Stop
-    </button>
-    
-    
-    <div class="hidden popup">
-      <h2 id="win-message">Congratulations, you won! 🎉🎉🎉</h2>
-<!--       <h2 id="lose-message">Ooopsie, you lost! 🎉🎉🎉</h2> -->
-      <b class="close" onclick="closePopup()">x</b>
-      <b class="play-again" onclick="startGame()">PLAY AGAIN</b>
+    <div class="popup lose-stats">
+      <h3 id="lose-message">Ooopsie, you lost! 😔😔😔</h3>
+      <b class="buttons play-again" onclick="startGame()">PLAY AGAIN</b>
+      <b class="buttons back-to-menu" onclick="backToMenu()">BACK TO MENU</b>
     </div>
     
   </body>
