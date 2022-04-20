@@ -61,13 +61,13 @@ The following **additional** features are implemented:
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
       
-      https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
-      https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
-      https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
-      https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices
-      https://www.youtube.com/watch?v=VlwSz2dXK_8
-      https://www.w3schools.com/js/js_htmldom_eventlistener.asp
-      https://stackoverflow.com/questions/43167907/sound-play-stop-pause
+      - https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+      - https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+      - https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+      - https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices
+      - https://www.youtube.com/watch?v=VlwSz2dXK_8
+      - https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+      - https://stackoverflow.com/questions/43167907/sound-play-stop-pause
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
