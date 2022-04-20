@@ -177,7 +177,7 @@ function countDown() {
     if (time < 0 || resetTime) {
       if(!resetTime) {
         loseStats.classList.remove("hidden");
-        stopGame(); 
+        endGame(); 
       }
       time = 16;
       clearInterval(timer);

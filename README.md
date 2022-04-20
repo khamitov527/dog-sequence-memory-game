@@ -4,7 +4,7 @@
 
 Submitted by: **Akylbek Khamitov**
 
-Time spent: **15** hours spent in total
+Time spent: **22** hours spent in total
 
 Link to project: https://glitch.com/~dog-sequence
 
@@ -34,25 +34,29 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Added heart images to show the number of lives left
+- [x] Popups added for main, game, and results section.
+- [x] User can navigate through pages.
+- [x] Added heart emojis to show the number of lives left
+- [x] Added timer with clock emoji that shows number of seconds left
 - [x] Added gifs instead of colors for buttons
 - [x] Each button has a custom sound (game does not use any frequency sounds)
-- [x] Added timer that shows number of seconds left
-- [x] When a player makes a mistake, timer resets
+- [x] When a player makes a mistake, timer resets (15s, every time)
 
 
-## Video Walkthrough (GIF, 1.5x speed, no sound) (Try it yourself [here](https://dog-sequence.glitch.me/))
+## Video Walkthrough (GIF) (Try it yourself [here](https://dog-sequence.glitch.me/))
 
-### Walkthrough without playing
-![Walkthrough](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/walkthrough.gif)
-### Player wins
-![Win](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/win.gif)
-### Player loses
-![Lost](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/lost.gif)
-### Player makes mistakes but wins anyway
-![mistakesWin](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/mistakesWin.gif)
-### Player loses because time exceeds the limit
-![timeUp](https://github.com/khamitov527/dog-sequence-memory-game/blob/main/timeUp.gif)
+![won.gif](https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/dogseqwon.gif?v=1650484612901)
+![lost.gif](https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/dogseqlost.gif?v=1650484625247)
+
+
+## Gallery
+
+![menu](https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/menu.png?v=1650483899994)
+![game](https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/game.png?v=1650483887484)
+![gameonelife](https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/gameonelife.png?v=1650483896078)
+![statslost](https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/statslost.png?v=1650483903301)
+![statswon](https://cdn.glitch.global/4ff6e246-d53b-43ec-8f11-e0ddb6bfa75f/statswon.png?v=1650483906907)
+
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -66,13 +70,20 @@ The following **additional** features are implemented:
       - https://stackoverflow.com/questions/43167907/sound-play-stop-pause
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+
+One of the biggest challenges was adding audio files instead of using frequency list. In the optional features there is a section asking to implement more complex sounds like audio files or chords. To implement this feature I tried using Web Audio API. I made it work for one button but it required writing lots of lines of codes for all the other buttons. That is why, I decided to use native audio library which is pretty easy to use once you implement it once. As a result, all of my buttons have custom sounds, which makes the game more interesting and enjoyable to play without hearing those frequency sounds.
+
+Another challenge was implementing the timer. Building the timer was not a huge deal, but it required tons of debugging. The reason behind it is that timer has to work with buttons, so it needed a lot of logic in the code. To solve this problem, I wrote down all the moments when timer was crashing the program and debugged the code. Then I decided to put the timer for each round where you have 15 seconds to complete it. Also, when making a mistake timer resets, so you are given another 15 seconds. After, I displayed timer in the p tag, so user can see how many seconds left. As a result, timer works and gives a good user experience.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+How developers maintain websites when updating, adding new features and versions?
+How to deploy a website that would interact with a lot of user data and how to make this process secure? 
+How cloud and data based platforms and frameworks are used in web development?
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+If I had more time to work on this project, I would definitely make the game more complex by shuffling all the cards each game, so players would not have a chance to memorize the location of cards which makes the game harder to play. I would also create a leaderboard where it would store all personal records of users (Personal records of the day, month, all time). I was thinking about including different themes like cat sequence, cars sequence, etc. One top of it, have different sounds for each theme.
 
 
 
