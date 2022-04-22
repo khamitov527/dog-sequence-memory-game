@@ -89,7 +89,7 @@ If I had more time to work on this project, I would definitely make the game mor
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://www.loom.com/share/21c84a34c5354198a59df68946508e13)
 
 
 ## License
